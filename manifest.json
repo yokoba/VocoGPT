@@ -1,0 +1,14 @@
+{
+  "name": "Voice control for ChatGPT",
+  "version": "0.1",
+  "manifest_version": 3,
+  "description": "Use Web Speech API for speech recognition on chatgpt.com",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
